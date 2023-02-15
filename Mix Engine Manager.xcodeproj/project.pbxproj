@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F2440FC299C697200DCA838 /* Mix_Engine_ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2440FB299C697200DCA838 /* Mix_Engine_ManagerApp.swift */; };
+		2F2440FE299C697200DCA838 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2440FD299C697200DCA838 /* ContentView.swift */; };
+		2F244100299C697400DCA838 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2440FF299C697400DCA838 /* Assets.xcassets */; };
+		2F244103299C697400DCA838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F244102299C697400DCA838 /* Preview Assets.xcassets */; };
+		2F24410D299C8BEF00DCA838 /* MixEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F24410C299C8BEF00DCA838 /* MixEngine.swift */; };
+		2F244111299CBD4500DCA838 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 2F244110299CBD4500DCA838 /* LaunchAtLogin */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F2440F8299C697200DCA838 /* Mix Engine Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mix Engine Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2440FB299C697200DCA838 /* Mix_Engine_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mix_Engine_ManagerApp.swift; sourceTree = "<group>"; };
+		2F2440FD299C697200DCA838 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2F2440FF299C697400DCA838 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F244102299C697400DCA838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F244104299C697400DCA838 /* Mix_Engine_Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mix_Engine_Manager.entitlements; sourceTree = "<group>"; };
+		2F24410C299C8BEF00DCA838 /* MixEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixEngine.swift; sourceTree = "<group>"; };
+		2F24410E299CBC3000DCA838 /* Mix-Engine-Manager-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Mix-Engine-Manager-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F2440F5299C697200DCA838 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F244111299CBD4500DCA838 /* LaunchAtLogin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F2440EF299C697200DCA838 = {
+			isa = PBXGroup;
+			children = (
+				2F2440FA299C697200DCA838 /* Mix Engine Manager */,
+				2F2440F9299C697200DCA838 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F2440F9299C697200DCA838 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F2440F8299C697200DCA838 /* Mix Engine Manager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F2440FA299C697200DCA838 /* Mix Engine Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2F24410E299CBC3000DCA838 /* Mix-Engine-Manager-Info.plist */,
+				2F2440FB299C697200DCA838 /* Mix_Engine_ManagerApp.swift */,
+				2F24410C299C8BEF00DCA838 /* MixEngine.swift */,
+				2F2440FD299C697200DCA838 /* ContentView.swift */,
+				2F2440FF299C697400DCA838 /* Assets.xcassets */,
+				2F244104299C697400DCA838 /* Mix_Engine_Manager.entitlements */,
+				2F244101299C697400DCA838 /* Preview Content */,
+			);
+			path = "Mix Engine Manager";
+			sourceTree = "<group>";
+		};
+		2F244101299C697400DCA838 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2F244102299C697400DCA838 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F2440F7299C697200DCA838 /* Mix Engine Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F244107299C697400DCA838 /* Build configuration list for PBXNativeTarget "Mix Engine Manager" */;
+			buildPhases = (
+				2F2440F4299C697200DCA838 /* Sources */,
+				2F2440F5299C697200DCA838 /* Frameworks */,
+				2F2440F6299C697200DCA838 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mix Engine Manager";
+			packageProductDependencies = (
+				2F244110299CBD4500DCA838 /* LaunchAtLogin */,
+			);
+			productName = "Mix Engine Manager";
+			productReference = 2F2440F8299C697200DCA838 /* Mix Engine Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F2440F0299C697200DCA838 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					2F2440F7299C697200DCA838 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 2F2440F3299C697200DCA838 /* Build configuration list for PBXProject "Mix Engine Manager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F2440EF299C697200DCA838;
+			packageReferences = (
+				2F24410F299CBD4500DCA838 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
+			productRefGroup = 2F2440F9299C697200DCA838 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F2440F7299C697200DCA838 /* Mix Engine Manager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F2440F6299C697200DCA838 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F244103299C697400DCA838 /* Preview Assets.xcassets in Resources */,
+				2F244100299C697400DCA838 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F2440F4299C697200DCA838 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F24410D299C8BEF00DCA838 /* MixEngine.swift in Sources */,
+				2F2440FE299C697200DCA838 /* ContentView.swift in Sources */,
+				2F2440FC299C697200DCA838 /* Mix_Engine_ManagerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2F244105299C697400DCA838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F244106299C697400DCA838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2F244108299C697400DCA838 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Mix Engine Manager/Mix_Engine_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mix Engine Manager/Preview Content\"";
+				DEVELOPMENT_TEAM = 4XY9UN53BV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix-Engine-Manager-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zanegolas.Mix-Engine-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2F244109299C697400DCA838 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Mix Engine Manager/Mix_Engine_Manager.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mix Engine Manager/Preview Content\"";
+				DEVELOPMENT_TEAM = 4XY9UN53BV;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mix-Engine-Manager-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zanegolas.Mix-Engine-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F2440F3299C697200DCA838 /* Build configuration list for PBXProject "Mix Engine Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F244105299C697400DCA838 /* Debug */,
+				2F244106299C697400DCA838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F244107299C697400DCA838 /* Build configuration list for PBXNativeTarget "Mix Engine Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F244108299C697400DCA838 /* Debug */,
+				2F244109299C697400DCA838 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F24410F299CBD4500DCA838 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F244110299CBD4500DCA838 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F24410F299CBD4500DCA838 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2F2440F0299C697200DCA838 /* Project object */;
+}
