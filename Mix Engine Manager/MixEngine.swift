@@ -8,15 +8,17 @@
 import Foundation
 import AppKit
 
-class MixEngine {
+class MixEngine : ObservableObject {
     private var mixerEngine: [NSRunningApplication] = []
     
     private var executableURL = URL(fileURLWithPath: "/Library/Application Support/Universal Audio/Apollo/UA Mixer Engine.app/Contents/MacOS/UA Mixer Engine")
-    private let launchTask = Process()
     
     var stateIconString = "bolt.circle"
     
+    @Published var engineOff = true
+    
     init() {
+        print("Mix Engine Class Initialized")
         updateStatus()
     }
     
@@ -26,6 +28,8 @@ class MixEngine {
             executableURL = mixerEngine[0].executableURL ?? URL(fileURLWithPath: "/Library/Application Support/Universal Audio/Apollo/UA Mixer Engine.app/Contents/MacOS/UA Mixer Engine")
             print("Update complete with executable URL set to: ", executableURL)
         }
+        print("Update status function was run")
+        engineOff = mixerEngine.isEmpty
         updateStateIcon()
     }
     
@@ -40,8 +44,11 @@ class MixEngine {
             return
         }
         for instance in mixerEngine{
-            instance.terminate()
-            print("Termination Request Sent")
+            if instance.terminate() {
+                print("Termination Request Sent")
+            } else {
+                print("Termination Request Failed")
+            }
             sleep(1)
         }
         updateStatus()
@@ -53,19 +60,21 @@ class MixEngine {
     }
     
     func activateEngine(){
+        print("Activition Requested")
         updateStatus()
         if !isOff() {
             print("Engine Is Already Running")
             return
         }
-        launchTask.executableURL = executableURL
+        var launch_task = Process()
+        launch_task.executableURL = executableURL
         do {
-            try launchTask.run()
+            try launch_task.run()
         } catch {
             print("Unable To Start UA Mixer Engine")
         }
         sleep(1)
-        self.updateStatus()
+        updateStatus()
     }
     
     private func updateStateIcon(){
