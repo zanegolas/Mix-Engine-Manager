@@ -43,10 +43,9 @@ struct CustomToggleStyle: ToggleStyle {
                 .fontWeight(.bold)
                 
                 .symbolRenderingMode(.palette)
-                .foregroundStyle(.white, .red)
-//                .foregroundStyle(configuration.isOn ? (primary: Color.white, secondary: Color.red) : (primary: Color.white, secondary: Color.blue))
+                .foregroundStyle(.white, configuration.isOn ? .red : .blue)
                 
-                .rotationEffect(configuration.isOn ? .degrees(0) : .degrees(90))
+                .rotationEffect(configuration.isOn ? .degrees(90) : .degrees(0))
                 
                 
         }.buttonStyle(PlainButtonStyle())
@@ -77,23 +76,13 @@ struct MenuContent: View {
                         mixerEngine.toggleEngine()
                     }
                 
-                    }
-                    .toggleStyle(CustomToggleStyle())
-                    .offset(y: -20)
+            }
+            .toggleStyle(CustomToggleStyle())
+            .offset(y: -20)
             
-//            Button("Start UA Mixer Engine") {
-//                mixerEngine.activateEngine()
-////                engineState = "UA Engine On"
-//            }.disabled(!mixerEngine.engineOff)
-//            
-//            Button("Stop UA Mixer Engine") {
-//                mixerEngine.terminateEngine()
-////                engineState = "UA Engine Off"
-//            }.disabled(mixerEngine.engineOff)
-            
-               Toggle("Auto Launch", isOn: $launchAtLogin)
-                    .toggleStyle(SwitchToggleStyle())
-                    .font(.title2)
+           Toggle("Auto Launch", isOn: $launchAtLogin)
+                .toggleStyle(SwitchToggleStyle())
+                .font(.title2)
             
         }.padding(10)
             .frame(width: 200, height: 225)
