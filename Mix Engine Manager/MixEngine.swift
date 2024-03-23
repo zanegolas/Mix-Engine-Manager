@@ -37,6 +37,14 @@ class MixEngine : ObservableObject {
         return mixerEngine.isEmpty
     }
     
+    func toggleEngine() {
+        if (engineOff) {
+            activateEngine()
+        } else {
+            terminateEngine()
+        }
+    }
+    
     func terminateEngine(){
         updateStatus()
         if isOff() {
@@ -66,7 +74,7 @@ class MixEngine : ObservableObject {
             print("Engine Is Already Running")
             return
         }
-        var launch_task = Process()
+        let launch_task = Process()
         launch_task.executableURL = executableURL
         do {
             try launch_task.run()

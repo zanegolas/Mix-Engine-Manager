@@ -31,30 +31,71 @@ struct Mix_Engine_ManagerApp: App {
     }
 }
 
+struct CustomToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button(action: {
+            configuration.isOn.toggle()
+        }) {
+            Image(systemName: "togglepower")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .padding(20)
+                .fontWeight(.bold)
+                
+                .symbolRenderingMode(.palette)
+                .foregroundStyle(.white, .red)
+//                .foregroundStyle(configuration.isOn ? (primary: Color.white, secondary: Color.red) : (primary: Color.white, secondary: Color.blue))
+                
+                .rotationEffect(configuration.isOn ? .degrees(0) : .degrees(90))
+                
+                
+        }.buttonStyle(PlainButtonStyle())
+    }
+}
+
 struct MenuContent: View {
     @ObservedObject var mixerEngine: MixEngine
+    @State private var launchAtLogin = LaunchAtLogin.isEnabled
     
     var body: some View {
         VStack {
-            Button("Start UA Mixer Engine") {
-                mixerEngine.activateEngine()
-//                engineState = "UA Engine On"
-            }.disabled(!mixerEngine.engineOff)
+            HStack {
+                Button(role: .destructive, action: {NSApplication.shared.terminate(nil)}) {
+                    Label("", systemImage: "xmark.square")
+                        .font(.title)
+                        
+                        .foregroundColor(.red)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .keyboardShortcut("q")
+                
+                Spacer()
+            }
+            Toggle(isOn: $mixerEngine.engineOff) {
+                        Text("Custom Toggle")
+                    .onTapGesture {
+                        mixerEngine.toggleEngine()
+                    }
+                
+                    }
+                    .toggleStyle(CustomToggleStyle())
+                    .offset(y: -20)
             
-            Button("Stop UA Mixer Engine") {
-                mixerEngine.terminateEngine()
-//                engineState = "UA Engine Off"
-            }.disabled(mixerEngine.engineOff)
+//            Button("Start UA Mixer Engine") {
+//                mixerEngine.activateEngine()
+////                engineState = "UA Engine On"
+//            }.disabled(!mixerEngine.engineOff)
+//            
+//            Button("Stop UA Mixer Engine") {
+//                mixerEngine.terminateEngine()
+////                engineState = "UA Engine Off"
+//            }.disabled(mixerEngine.engineOff)
             
-            Divider()
+               Toggle("Auto Launch", isOn: $launchAtLogin)
+                    .toggleStyle(SwitchToggleStyle())
+                    .font(.title2)
             
-            LaunchAtLogin.Toggle("Launch On Login")
-            
-            Divider()
-            
-            Button("Quit") {
-                NSApplication.shared.terminate(nil);
-            }.keyboardShortcut("q")
-        }
+        }.padding(10)
+            .frame(width: 200, height: 225)
     }
 }
