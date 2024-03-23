@@ -14,8 +14,17 @@ class MixEngine : ObservableObject {
     private var executableURL = URL(fileURLWithPath: "/Library/Application Support/Universal Audio/Apollo/UA Mixer Engine.app/Contents/MacOS/UA Mixer Engine")
     
     var stateIconString = "bolt.circle"
+    var lastState = true;
     
-    @Published var engineOff = true
+    @Published var engineOff = true {
+        didSet{
+            if(lastState != engineOff) {
+                lastState = engineOff
+                toggleEngine()
+            }
+            
+        }
+    }
     
     init() {
         print("Mix Engine Class Initialized")
@@ -39,9 +48,9 @@ class MixEngine : ObservableObject {
     
     func toggleEngine() {
         if (engineOff) {
-            activateEngine()
-        } else {
             terminateEngine()
+        } else {
+           activateEngine()
         }
     }
     
